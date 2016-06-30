@@ -14,11 +14,18 @@ ul {list-style-type: none; -webkit-padding-start: 0px; margin:0px; padding:0px; 
   width: 1100px;
   margin: 0px auto;
 }
+.content{
+  box-sizing: border-box;
+}
 @border-color:#999;
 /**/
 .topBar{
   height: 20px;
   line-height: 20px;
+  text-align: center;
+  span{
+    color: red;
+  }
 }
 .header{
   height: 50px;
@@ -59,6 +66,7 @@ ul {list-style-type: none; -webkit-padding-start: 0px; margin:0px; padding:0px; 
       transition: all .3s ease-in;
       a{
         font-size: 16px;
+        color: #666;
       }
     }
     li:hover{
@@ -67,5 +75,67 @@ ul {list-style-type: none; -webkit-padding-start: 0px; margin:0px; padding:0px; 
         color: #fff;
       }
     }
+  }
+}
+.index{
+  .banner{
+    height: 300px;
+    min-width: 1100px;
+    background: url("/images/icon_banner.gif") #000 repeat;
+    color: #fff;
+    line-height: 300px;
+    text-align: center;
+    font-size: 90px;
+    letter-spacing: 80px;
+    font-weight: bold;
+  }
+  > .body:after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .banner:hover{
+    -webkit-filter: blur(1px); /* Chrome, Opera */
+    -moz-filter: blur(1px);
+    -ms-filter: blur(1px);
+    filter: blur(1px);
+  }
+  li{
+    float: left;
+    line-height: 30px;
+    font-size: 14px;
+    padding: 0px 10px;
+    a{
+      border: 1px dashed #fff;
+      cursor: pointer;
+      padding:0px 5px;
+      border-radius: 3px;
+    }
+  }
+  li:hover a{
+    border: 1px dashed @border-color;
+  }
+  .nav:after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .tag:after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .border{
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid @border-color;
+  }
+  .main{
+    width: 70%;
+    float: left;
+  }
+  .rightBar{
+    width: 28%;
+    float: right;
   }
 }
